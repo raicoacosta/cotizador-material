@@ -48,7 +48,7 @@ const RegularButton = React.forwardRef((props, ref) => {
     [className]: className
   });
   return (
-    <Button {...rest} ref={ref} className={btnClasses}>
+    <Button {...rest}  ref={ref} className={btnClasses}>
       {children}
     </Button>
   );
@@ -70,6 +70,7 @@ RegularButton.propTypes = {
     "transparent"
   ]),
   size: PropTypes.oneOf(["sm", "lg"]),
+  type: PropTypes.string,
   simple: PropTypes.bool,
   round: PropTypes.bool,
   fullWidth: PropTypes.bool,
@@ -78,7 +79,7 @@ RegularButton.propTypes = {
   link: PropTypes.bool,
   justIcon: PropTypes.bool,
   children: PropTypes.node,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default RegularButton;
